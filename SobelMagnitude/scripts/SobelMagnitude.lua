@@ -29,7 +29,6 @@ local DELAY = 1000 -- ms between visualization steps for demonstration purpose
 
 -- Creating viewer
 local viewer = View.create()
-viewer:setID('viewer2D')
 
 --End of Global Scope-----------------------------------------------------------
 
@@ -37,6 +36,7 @@ viewer:setID('viewer2D')
 
 local function main()
   local img = Image.load('resources/SobelMagnitude.bmp')
+  viewer:clear()
   viewer:addImage(img)
   viewer:present()
   Script.sleep(DELAY) -- for demonstration purpose only
